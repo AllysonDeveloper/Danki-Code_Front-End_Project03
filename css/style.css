@@ -40,9 +40,7 @@ header{
     height: 45px;
     background-color: #CCC;
 }
-#mobile-menu{
-    display: none;
-}
+
 
 header i{
     display: none !important;
@@ -201,7 +199,7 @@ ul li a{
 }
 
 .info-box{
-    width: 300px;
+    width: 340px;
     margin-top: 200px;
     align-items: flex-start;
     padding: 0 20px;
@@ -251,6 +249,21 @@ ul li a{
 
 .active{
     background-color: black;
+}
+
+.slider-autor{
+    width: 100%;
+    overflow: hidden;
+}
+.autor-container{
+    transition: 1s;
+}
+
+.translate{
+    transform: translateX(-300px) !important;
+}
+.translate2{
+    transform: translateX(-600px);
 }
 
 /*Estilização Seção de Contato*/
@@ -437,10 +450,6 @@ footer span{
         padding: 15px 15px;
         height: auto;
     }
-    
-    header nav{
-        display: none;
-    }
 
     /*Segunda seção*/
 
@@ -548,8 +557,19 @@ footer span{
     }
 
     #mobile-menu{
+        transition: 1s;
+        display: block;
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+        top: 80px;
+        left: 0;
         width: 100%;
         background-color: white;
+    }
+
+    .open{
+        height: 175px;
     }
 
     #mobile-menu ul{
@@ -565,10 +585,14 @@ footer span{
 
     #mobile-menu a{
         margin: 0;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #7D60A6;
-        height: 30px;
+    }
+
+    #desktop-menu{
+        display: none;
     }
 }
